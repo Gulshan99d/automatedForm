@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<title>Find the student name</title>
+	</head>
+	<body>
+		<div class="main-popup">
+			<div id="search-view">
+				<input
+					type="text"
+					id="student-search"
+					placeholder="Search student by name..." />
+				<ul id="student-list"></ul>
+			</div>
+			<div id="student-view" style="display: none">
+				<ul id="student-details"></ul>
+				<div class="nav-btns">
+					<button id="back-btn">
+						<svg
+							viewBox="0 0 48 48"
+							xmlns="http://www.w3.org/2000/svg"
+							height="2em"
+							width="2em">
+							<path
+								fill="currentColor"
+								d="m22.35 38.95-13.9-13.9q-.25-.25-.35-.5Q8 24.3 8 24q0-.3.1-.55.1-.25.35-.5L22.4 9q.4-.4 1-.4t1.05.45q.45.45.45 1.05 0 .6-.45 1.05L13.1 22.5h24.8q.65 0 1.075.425.425.425.425 1.075 0 .65-.425 1.075-.425.425-1.075.425H13.1l11.4 11.4q.4.4.4 1t-.45 1.05q-.45.45-1.05.45-.6 0-1.05-.45Z" />
+						</svg>
+					</button>
+					<div class="navigation">
+						<button class="navigation-btn prev">
+							<svg
+								viewBox="0 0 48 48"
+								xmlns="http://www.w3.org/2000/svg"
+								height="1.5em"
+								width="1.5em">
+								<path
+									fill="currentColor"
+									d="M18.6 42.6 1.05 25.05q-.25-.25-.35-.5Q.6 24.3.6 24q0-.3.1-.55.1-.25.35-.5L18.6 5.4q.55-.55 1.4-.55.85 0 1.4.55.6.6.6 1.425 0 .825-.6 1.425L5.65 24 21.4 39.75q.6.6.575 1.425-.025.825-.575 1.375-.6.6-1.425.6-.825 0-1.375-.55Z" /></svg
+							>Prev
+						</button>
+						<button class="navigation-btn next">
+							Next
+							<svg
+								viewBox="0 0 48 48"
+								xmlns="http://www.w3.org/2000/svg"
+								height="1.5em"
+								width="1.5em">
+								<path
+									fill="currentColor"
+									d="M13.8 42.45q-.55-.6-.575-1.4-.025-.8.575-1.4L29.55 23.9 13.8 8.15q-.55-.55-.575-1.375-.025-.825.575-1.425.55-.6 1.375-.625Q16 4.7 16.6 5.3l17.55 17.55q.25.25.35.5.1.25.1.55 0 .3-.1.55-.1.25-.35.5L16.6 42.5q-.55.55-1.375.55t-1.425-.6Z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2>Student Registration Form</h2>
+			<form>
+				<label>Full Name</label>
+				<input type="text" name="name" required />
+
+				<label>Father's Name</label>
+				<input type="text" name="father_name" required />
+
+				<label>Mother's Name</label>
+				<input type="text" name="mother_name" required />
+
+				<label for="dob">Date of Birth</label>
+				<input type="date" name="dob" id="dob" required />
+
+				<label>Gender</label>
+				<select name="gender">
+					<option value="">Select</option>
+					<option>Male</option>
+					<option>Female</option>
+					<option>Other</option>
+				</select>
+
+				<label>Aadhaar Number</label>
+				<input type="text" name="aadhaar" maxlength="12" required />
+
+				<label>Email ID</label>
+				<input type="email" name="email" />
+
+				<label>Mobile Number</label>
+				<input type="text" name="mobile" maxlength="10" required />
+
+				<label>Institute Name</label>
+				<input type="text" name="institute" required />
+
+				<label>Course</label>
+				<input type="text" name="course" required />
+
+				<label for="gender">gender:</label>
+				<input type="radio" name="gender" id="male" />male
+				<input type="radio" name="gender" id="female" />female
+
+				<label for="caste">Category:</label>
+				<input
+					type="radio"
+					name="category"
+					id="Sheduled_Caste"
+					value="SC" />Sheduled Caste
+				<input type="radio" name="category" id="OBC" value="OBC" />Other
+				Backward Classes
+				<input type="radio" name="category" id="BC" value="BC" />
+				Backward Classe
+				<input type="radio" name="category" id="general" value="general" />
+				general <input type="radio" name="category" id="ST" value="st" />
+				sheduled tribe
+
+				<label>Year of Study</label>
+				<select name="year">
+					<option>1st Year</option>
+					<option>2nd Year</option>
+					<option>3rd Year</option>
+					<option>4th Year</option>
+				</select>
+
+				<label>Upload ID Proof (PDF)</label>
+				<!--<input type="file" name="id_proof" accept=".pdf" />-->
+
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<script src="script.js" type="module" charset="utf-8"></script>
+	</body>
+</html>
